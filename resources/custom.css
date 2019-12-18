@@ -1,0 +1,142 @@
+.slides {
+	counter-reset: page;
+}
+
+.slides > article {
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	margin-left: 0;
+	margin-top: 0;
+	box-shadow: none;
+	border-radius: 0;
+	border: none; 
+	display: block;
+	z-index: -1;
+	opacity: 0;
+}
+.slides > article.far-past {
+	display: block;
+	transform: none;
+  }
+  .slides > article.past {
+	display: block;
+	transform: none;
+  }
+  .slides > article.current {
+	display: block;
+	transform: none;
+	opacity: 1;
+	z-index: 1;
+  }
+  .slides > article.next {
+	display: block;
+	transform: none;
+  }
+  .slides > article.far-next {
+	display: block;
+	transform: none;
+  }
+
+article:not(.nologo) {
+	background: white;
+	overflow-y: auto;
+}
+article:before {
+	content: counter(page);
+    position: fixed;
+    counter-increment: page;
+    bottom: 10px;
+    font-size: 70%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+article:not(.title_slide)::after {
+	content: "It's React Time";
+	position: fixed;
+	right: 60px;
+	bottom: 10px;
+	font-size: 70%;
+}
+
+article.title_slide h2{
+	position: static;
+	bottom: auto;
+}
+
+.title_info {
+	position: absolute;
+	right: 50px;
+	bottom: 50px;
+	font-size: 80%;
+}
+
+h1 + h2 {
+	margin-top: 20px;
+}
+
+.small {
+	font-size: 75%;
+}
+
+iframe {
+	height: 550px;
+}
+
+h3 + iframe {
+	height: 500px;
+}
+
+.contact_me a, .contact_me a:visited, .slides > article.problem .contact_me .icon{
+	color: black;
+	font-size: 75%;
+}
+
+.pink {
+	color: rgb(244, 58, 109); /* this is our official pink color */
+}
+
+code {
+	font-family: 'Roboto Mono','Courier New', monospace;
+}
+pre {
+	font-family: 'Roboto Mono','Courier New', monospace;
+	overflow: auto;
+	max-height: calc(100% - 130px);
+}
+
+.pre-label {
+	position: absolute;
+	left: 20px;
+	top: -25px;
+	margin: 0;
+	padding: 5px 15px;
+	font-size: 75%;
+	background: white;
+}
+
+.thank_you_slide {
+	text-align: center;
+}
+
+.thank_you_slide h1 {
+	font-size: 70px;
+}
+li > ul:first-child {
+	margin-top: 10px;
+	margin-left: 40px;
+}
+table pre {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+li > pre {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+table {
+	table-layout: fixed;
+}
